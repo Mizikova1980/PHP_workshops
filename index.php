@@ -9,7 +9,7 @@
 <body>
 <?php
 
-require 'src/functions2.php';
+require 'src/functions.php';
 
 echo 'Задание 3.1 <br>';
 echo task1();
