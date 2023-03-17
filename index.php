@@ -9,11 +9,22 @@
 <body>
 <?php
 
-require 'src/functions.php';
+require 'src/ws4.php';
 
-echo 'Задание 3.1 <br>';
-echo task1();
-echo task2();
+$tariff = new Basic();
+echo $tariff->calculate(5, 60, ['addDriver','gps']);
+
+$tariff = new Basic();
+echo $tariff->calculate(5, 60, ['gps']);
+
+$tariff = new Student();
+echo $tariff->calculate(5, 60, ['addDriver','gps']);
+
+$tariff = new Student();
+echo $tariff->calculate(20, 120, ['addDriver']);
+
+$tariff = new Hourly();
+echo $tariff->calculate(5, 70, ['addDriver']);
 
 
 ?>
